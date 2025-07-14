@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import { Menu, X, User, Wallet, FileText, HelpCircle } from "lucide-react"
+import { Menu, X, User, Wallet, FileText, HelpCircle, CreditCard } from "lucide-react"
 import { useState } from "react"
 
 export function Navigation() {
@@ -14,8 +14,10 @@ export function Navigation() {
     { href: "/", label: "Home", icon: null },
     { href: "/create-identity", label: "Create Identity", icon: User },
     { href: "/credentials", label: "Credentials", icon: FileText },
-    { href: "/wallet", label: "Wallet", icon: Wallet },
+    { href: "/payments", label: "Payments", icon: Wallet },
     { href: "/help", label: "Help", icon: HelpCircle },
+    { href: "/access-credit", label: "Access Credit", icon: CreditCard },
+    { href: "/profile", label: "Profile", icon: User },
   ]
 
   return (

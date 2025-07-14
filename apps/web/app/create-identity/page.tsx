@@ -10,6 +10,7 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Upload, Camera, MapPin, Shield, Lock, Globe } from "lucide-react"
 import { useRouter } from "next/navigation"
+import { registerIdentity } from "@/lib/soroban"
 
 export default function CreateIdentityPage() {
   const [formData, setFormData] = useState({
@@ -25,10 +26,16 @@ export default function CreateIdentityPage() {
     setIsLoading(true)
 
     // Simulate identity creation
-    setTimeout(() => {
-      setIsLoading(false)
-      router.push("/credentials")
-    }, 2000)
+    registerIdentity({
+      name: formData.name,
+      country: formData.location,
+      docType: "selfie",
+      docHash: "1234567890",
+    })
+    // setTimeout(() => {
+    //   setIsLoading(false)
+    //   router.push("/credentials")
+    // }, 2000)
   }
 
   return (
