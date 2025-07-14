@@ -1,135 +1,87 @@
-# Turborepo starter
+# NomadPass
 
-This Turborepo starter is maintained by the Turborepo core team.
+NomadPass is a decentralized identity and financial access platform built on the Stellar blockchain. It empowers unbanked individuals including migrants, informal workers, and underserved communities to:
 
-## Using this example
+* ✅ Create and manage a verifiable digital identity on chain
+* 💸 Receive payments, donations, and financial aid via a wallet linked to their identity
+* 📜 Hold and share verifiable credentials such as educational or job certifications
+* 🛡️ Access microloans and microinsurance services via Soroban smart contracts
 
-Run the following command:
+---
 
-```sh
-npx create-turbo@latest
-```
+## 🌍 Why NomadPass?
 
-## What's inside?
+Billions of people globally remain excluded from the formal financial system due to lack of documentation, credit history, or digital infrastructure. NomadPass aims to break these barriers by offering:
 
-This Turborepo includes the following packages/apps:
+* Self sovereign identity creation and verification
+* Integrated wallet for Stellar-based payments and remittances
+* Credential issuing for trusted third parties
+* Access to decentralized financial services
 
-### Apps and Packages
+---
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+## 🚀 Features
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+* **Decentralized Identity**
+  Register and verify identity using a Soroban smart contract on Stellar Testnet.
 
-### Utilities
+* **Stellar Wallet Integration**
+  Connect a wallet, receive funds, and view transaction history.
 
-This Turborepo has some additional tools already setup for you:
+* **Verifiable Credentials**
+  Add certifications or documents that can be verified by third parties.
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+* **Microcredit & Insurance Access (WIP)**
+  Access decentralized financial tools based on identity and reputation.
 
-### Build
+---
 
-To build all apps and packages, run the following command:
+## 📦 Tech Stack
 
-```
-cd my-turborepo
+* **Frontend**: Next.js 14, Tailwind CSS, shadcn/ui
+* **Blockchain**: Stellar, Soroban smart contracts (Rust)
+* **Wallet Integration**: Freighter wallet
+* **Smart Contract Interaction**: Stellar CLI & Soroban SDK
 
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo build
+---
 
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo build
-yarn dlx turbo build
-pnpm exec turbo build
-```
-
-You can build a specific package by using a [filter](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters):
+## 📂 Project Structure
 
 ```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo build --filter=docs
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo build --filter=docs
-yarn exec turbo build --filter=docs
-pnpm exec turbo build --filter=docs
+/app
+  /create-identity     # Form to register and verify identity
+  /credentials          # List and manage verifiable credentials
+  /wallet               # View wallet address, receive funds, track transactions
+  /microcredit          # (Coming soon) Access loans or insurance
+  /help                 # Assistance and FAQ
+/contracts
+  identity_registry     # Soroban smart contract for identity storage
 ```
 
-### Develop
+---
 
-To develop all apps and packages, run the following command:
+## 🧪 Running Locally
 
-```
-cd my-turborepo
+1. Install dependencies
 
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo dev
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo dev
-yarn exec turbo dev
-pnpm exec turbo dev
+```bash
+npm install
 ```
 
-You can develop a specific package by using a [filter](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters):
+2. Run development server
 
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo dev --filter=web
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo dev --filter=web
-yarn exec turbo dev --filter=web
-pnpm exec turbo dev --filter=web
+```bash
+npm run dev
 ```
 
-### Remote Caching
+3. Build Soroban contract
 
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo login
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo login
-yarn exec turbo login
-pnpm exec turbo login
+```bash
+stellar contract build
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+---
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+## Built for the Stellar LATAM Hackathon
 
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo link
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo link
-yarn exec turbo link
-pnpm exec turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turborepo.com/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.com/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.com/docs/reference/configuration)
-- [CLI Usage](https://turborepo.com/docs/reference/command-line-reference)
+NomadPass is being developed as part of the [Stellar LATAM Hackathon](https://stellar.org), targeting real-world financial and identity challenges in Latin America.
