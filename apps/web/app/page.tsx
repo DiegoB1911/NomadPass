@@ -10,11 +10,11 @@ export default function LandingPage() {
       <section className="bg-gradient-to-br from-primary/5 via-white to-primary/10 py-20 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Empowering the Unbanked with <span className="text-primary">Digital Identity</span> and Wallets
+            Empowering the Unbanked with <span className="text-primary">Digital Identity</span>, <span className="text-primary">Payments</span> and more
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
-            NomadPass helps anyone without a bank account get verified, receive aid, and access a digital wallet—no
-            traditional ID required. Your identity, your control.
+            NomadPass helps anyone without a bank account get verified, receive aid, and access a digital identity,
+            payments and more. Your identity, your control.
           </p>
           <Link href="/create-identity">
             <Button size="lg" className="text-lg px-8 py-6 rounded-full">
@@ -39,7 +39,7 @@ export default function LandingPage() {
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Create Your Digital Identity</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Build a secure, self-sovereign identity without traditional documents. Your personal information stays
+                  Build a secure, self sovereign identity without traditional documents. Your personal information stays
                   private and under your control.
                 </p>
               </CardContent>
@@ -52,8 +52,7 @@ export default function LandingPage() {
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Receive Payments Safely</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Get your digital wallet instantly. Receive aid, remittances, and payments from anywhere in the world,
-                  even without a bank account.
+                  Receive aid, remittances, and payments from anywhere in the world, even without a bank account.
                 </p>
               </CardContent>
             </Card>
@@ -65,7 +64,7 @@ export default function LandingPage() {
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Access Anywhere</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Your identity and wallet work globally. Move across borders while keeping access to your funds and
+                  Your identity and payments work globally. Move across borders while keeping access to your funds and
                   verified credentials.
                 </p>
               </CardContent>

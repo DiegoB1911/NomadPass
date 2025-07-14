@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "NomadPass - Digital Identity for Everyone",
-  description: "Empowering the unbanked with digital identity and wallets",
+  description: "Empowering the unbanked with digital identity, payments and more",
   generator: "v0.dev",
 };
 

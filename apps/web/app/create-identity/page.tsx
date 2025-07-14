@@ -44,7 +44,7 @@ export default function CreateIdentityPage() {
         <div className="text-center mb-12">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Create Your Digital Identity</h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Build your secure, self-sovereign identity. No traditional documents required.
+            Build your secure, self sovereign identity. No traditional documents required.
           </p>
         </div>
 
@@ -139,7 +139,7 @@ export default function CreateIdentityPage() {
                 <ul className="space-y-3 text-sm text-gray-700">
                   <li className="flex items-start">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <span>You will receive a self-sovereign identity that you fully control</span>
+                    <span>You will receive a self sovereign identity that you fully control</span>
                   </li>
                   <li className="flex items-start">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>

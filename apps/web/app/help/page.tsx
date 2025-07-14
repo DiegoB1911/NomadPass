@@ -28,7 +28,7 @@ export default function HelpPage() {
               to financial services and the ability to prove their identity, regardless of their documentation status.
             </p>
             <p className="text-lg leading-relaxed">
-              Our platform uses cutting-edge blockchain technology to create self-sovereign identities that you control
+              Our platform uses cutting-edge blockchain technology to create self sovereign identities that you control
               completely. No government, bank, or corporation can take away your NomadPass identity or access to your
               digital wallet.
             </p>
@@ -89,7 +89,7 @@ export default function HelpPage() {
               <div className="flex items-start space-x-3">
                 <div className="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0"></div>
                 <div>
-                  <h4 className="font-semibold mb-1">Self-Sovereign Identity</h4>
+                  <h4 className="font-semibold mb-1">Self Sovereign Identity</h4>
                   <p className="text-gray-600">
                     You own and control your identity completely. No central authority can revoke or modify it.
                   </p>
